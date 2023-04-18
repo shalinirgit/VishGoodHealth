@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+   <script>
+   
+   function inputValidationFn (){
+	   
+	  // alert("Inside Validation");
+	   validatePassword(); 
+	   //registrationresult();
+	   
+	   
+   }
+   
+   
+   function validatePassword() {
+	  // alert("Inside validatePassword");
+	   
+	    var password = document.getElementById("password");
+	    var rpassword = document.getElementById("rpassword");
+	  //  alert("password = "+password);
+	   // alert("rpassword = "+rpassword);
+	    if (password != rpassword) {
+	        document.getElementById("demo").innerHTML = "passwords not matching";
+	    } else {
+	        document.getElementById("demo").innerHTML = "Input OK";
+	    } 
+	}
+   
+   function registrationresult(){
+	   
+	   document.getElementById("demo").innerHTML = "registration successful. you will be sent an email for verification";
+	   
+   }
+	
+   </script> 
+
+  <form name="myForm">
+ 
+   
+	<table >
+	    <tr>
+			<td>Doctor ID :</td>
+			<td><input type=number id="idnumber" value="" required></input></td>
+			
+		</tr>
+		<tr>
+			<td>User Name :</td>
+			<td><input type=text id="username" value="" required></input></td>
+			
+		</tr>
+		<tr>
+			<td>Password :
+			<td><input type=password id="password" value="" required></input>
+			</td>
+			
+		</tr>
+		<tr>
+			<td>Re-Enter Password :
+			<td><input type=password id="rpassword" value="" required></input>
+			</td>
+			
+		</tr>
+		<tr>
+			<td>Email Id :
+			<td><input type=email id="email" value="" required></input>
+			</td>
+			
+		</tr>
+		<tr>
+			<td>Phone Num :
+			<td><input type=number  id="phone" value="" required></input>
+			</td>
+			
+		</tr>
+		<tr>
+			<td><input type=reset value="ReSet"></input></td>
+			<td><input type=submit onclick="inputValidationFn()"></input></td>
+		</tr>
+		
+
+	</table>
+	
+	<p id="demo"></p>
+
+</form>
+</body>
+</html>

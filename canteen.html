@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+
+</head>
+<body>
+
+<div id="mydiv1"></div>
+
+    <script type="text/babel">
+      function Hello() {
+        return <h1>Time to Refresh yourself!</h1>;
+      }
+
+      const container = document.getElementById('mydiv1');
+      const root = ReactDOM.createRoot(container);
+           
+      root.render(<Hello />)
+
+      
+    </script>
+
+<div id="mydiv2"></div>
+
+ <script type="text/babel">
+      function Order() {
+        return <h2>What would you like to order!</h2>;
+      }
+
+      const container = document.getElementById('mydiv2');
+      const root = ReactDOM.createRoot(container);
+           
+      root.render(<Order />)
+      
+</script>
+
+<div id="mydiv3"></div>
+
+<script type="text/babel">
+function CustOrder() {
+  return (
+    <form>
+      <label>Enter your order:
+        <input type="text" />
+      </label>
+    </form>
+  )
+}
+
+const container = document.getElementById('mydiv3');
+const root = ReactDOM.createRoot(container);
+           
+root.render(<CustOrder />)
+</script>
+
+
+<h2>## Food Menu ##</h2>
+
+<form>
+<table>
+<tr>
+<td>
+Sandwiches</td>
+<td>
+Cheese/SpinachnCorn</td>
+</tr>
+<tr>
+<td>
+Beverages</td>
+<td>
+Tea/Coffee/Chocolate Drink
+</td>
+</tr>
+</table>
+</form>
+
+
+
+</body>
+</html>
